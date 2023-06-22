@@ -55,3 +55,36 @@
 					adServer: "googletag",
 				});</script><script defer="defer" src="https://static.okccdn.com/builds/files/js/main.04dc0a80de6c85bc1c75.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7dacc5acbbc213f6","token":"503d145ff1164a2a95b8b3a2c0dc0959","version":"2023.4.0","si":100}' crossorigin="anonymous"></script>
 </body></html>
+git push to main
+
+python
+class User:
+    def __init__(self, name, age, gender, interests):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.interests = interests
+
+# Example list of users
+users = [
+    User("Alice", 25, "female", ["reading", "hiking"]),
+    User("Bob", 30, "male", ["cooking", "traveling"]),
+    User("Charlie", 28, "male", ["photography", "music"]),
+    User("Eve", 24, "female", ["painting", "dancing"])
+]
+
+# Filter users based on criteria (e.g., age and gender)
+def filter_users(users, min_age, max_age, gender):
+    filtered_users = []
+    for user in users:
+        if min_age <= user.age <= max_age and user.gender == gender:
+            filtered_users.append(user)
+    return filtered_users
+
+# Example usage: Filter users between the ages of 25 and 30, who are males
+filtered_users = filter_users(users, 25, 30, "male")
+
+# Print the filtered users
+for user in filtered_users:
+    print(f"Name: {user.name}, Age: {user.age}, Gender: {user.gender}, Interests: {user.interests}")
+
